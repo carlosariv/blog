@@ -1,0 +1,32 @@
+main {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    /* background: black; */
+
+    /* position: fixed; */
+    /* left: 50%; */
+    /* margin-left: -400px; */
+}
+
+/* main {
+    left: 50%;
+    width: 400px;
+    background: black;
+} */
+
+.dashed-line {
+    border: none;
+    border-top: 2px dashed #eee;
+    width: 100%;
+}
+
+.container {
+    border:#eee;
+}
+
+.entry-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

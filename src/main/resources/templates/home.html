@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Blog Home</title>
+</head>
+
+<body>
+    <!-- ... -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="">Home</a></li>
+                <li><a href="/post/new">Make Post</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Posts -->
+        <div th:each="post : ${posts}">
+            <div class="container entry">
+                <h1><span th:text="${post.title}"></span></h1>
+                <p><span th:text="${post.body}"></span></p>
+
+                <hr class="dashed-line">
+
+                <div class="container entry-footer">
+                    <div style="margin:10px;">
+                        <i class="bi bi-person-circle"></i>
+                        <a>Name</a>
+                    </div>
+                    <div style="margin:10px;">
+                        <i class="bi bi-calendar"></i>
+                        <a>June 27, 2019</a>
+                    </div>
+                    <div style="margin:10px;">
+                        <i class="bi bi-tag"></i>
+                        <a>Engine Tech</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
