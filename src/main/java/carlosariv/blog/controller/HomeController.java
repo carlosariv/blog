@@ -22,13 +22,6 @@ public class HomeController {
     public String getHome(Model model) {
         List<Post> posts = postService.findAllPosts();
         model.addAttribute("posts", posts);
-        for (Post post : posts) {
-            System.out.print("Post: ");
-            System.out.print(post.getTitle() + " ");
-            System.out.print(post.getCreateDate() + " ");
-            System.out.print(post.getBody());
-            System.out.println();
-        }
         return "/home";
     }
 }
